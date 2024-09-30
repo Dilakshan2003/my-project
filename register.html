@@ -1,0 +1,87 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body style="background-image: url(iamges/car\ in\ left\ site.jpg);background-repeat: no-repeat;  background-size: cover;">
+
+
+    <form id="RegisterForm">
+        
+    <div class="container2">
+        <h1 style="font-family: Verdana, Geneva, Tahoma, sans-serif;font-size: 42px; color: azure; text-shadow: 4px 4px #c42205;">REGISTER</h1>
+        <div style="display: flex; ">
+     <div style="margin-right: 32PX;">
+    <label for="user name" > FULL NAME</label><br>
+    <input type="text" placeholder="Enter Your full Name" name="name" id="fullname" required >
+     <br><br>
+    <label for="user name"> PHONE NUMBER</label><br>
+    <input type="text" placeholder="Enter Your phone number" name="phone number" id="phonenumber" required>
+    <br><br>
+    <label for="user name">  LICENSE NUMBER</label><br>
+    <input type="text" placeholder="Enter your license number" name="password" id="licensenumber" required  >
+    <br><br>
+    </div>
+    <div style="margin-right: 22PX;">
+    <label for="user name">YOUR EMAIL</label><br>
+    <input type="text" placeholder="Enter Your Email" name="user name"  id="Emailname" required>
+    <br><br> 
+    <label for="user name"> PASSWORD</label><br>
+    <input type="text" placeholder="Enter Your password" name="password"  id="passwordName" required>
+    <br><br>
+    <label for="user name">CONFIRM PASSWORD</label><br>
+    <input type="text" placeholder="Enter Your Confirm password" name="password" required id="confirmPassword">
+    <br>
+  
+</div>
+</div>
+<button type="submit"> REGISTRER</button>
+     <button style=" background-color: rgb(118, 223, 118); color: black;"><a href="login.html">BACK</a></button>
+     
+
+
+</div>
+</form>
+<script src="carrent.js"></script>
+<script> 
+
+    document
+    .getElementById("RegisterForm")
+    .addEventListener("submit", function (event) {
+    event.preventDefault();
+    
+    var fullname = document.getElementById("fullname").value;
+    var phonenumber = document.getElementById("phonenumber").value;
+    var licensenumber = document.getElementById("licensenumber").value;
+    var Emailname = document.getElementById("Emailname").value;
+    var passwordName = document. getElementById("passwordName").value;
+    var confirmPassword =document.getElementById("confirmPassword").value;
+    
+    if (passwordName !== confirmPassword) {
+    alert("Passwords do not match");
+    return;
+    }
+    
+    const user ={
+    
+    Emailname: Emailname, 
+    passwordName: passwordName,
+    fullname:fullname,
+    phonenumber:phonenumber,
+    licensenumber:licensenumber,
+    
+    
+    
+    };
+    localStorage. setItem(Emailname, JSON.stringify(user));
+    alert("Registration successful! Please login.");
+    window. location.href = "login.html";
+    });</script>
+</body>
+</html>

@@ -1,0 +1,342 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+
+<style>
+    .center{
+            margin-top: 50px;
+            text-align: center;
+            background-image: url(2\ cars\ im\ site.jpg);
+            background-repeat: no-repeat;
+        }
+
+        .hidden{
+            display: none;
+      }
+
+        .hello{ 
+            font-size: 50px;
+            display: none;
+
+        }
+</style>
+<body>
+
+
+  <div class="img2">
+    <nav>
+      <ul>
+      <li><i class='bx bxs-car bx-lg' ></i></li>
+      <li> <a href="carrent.html">HOME</a></li>
+      <li> <a href="cargallery.html">SELECT YOUR CAR</a></li>
+      <li> <a href="">ABOUT US</a></li>
+      <li> <a href="">CONTACT US</a></li>
+      
+      </ul>
+    </nav>
+   <div class="center"></div>
+    <h4 id="welcome" class="hello">Hello</h4>
+    <button id="logoutButton" class="hidden" style="height: 36px;width: 100px;   margin-left: 50px; border-radius: 10px; background-color: rgb(57, 197, 221); color: rgb(0, 0, 0);">logout</button>
+
+<script>
+   
+
+var user = localStorage.getItem("user");
+if(user){
+    var parsedUser = JSON.parse(user);
+    document.getElementById("welcome").innerHTML= `hello ${parsedUser.Emailname}`;
+    document.getElementById("logoutButton").classList.remove("hidden");
+}
+
+
+
+document.getElementById("logoutButton").addEventListener("click", function() {
+    localStorage.removeItem("user");
+    window.location.href = "login.html";
+});
+    
+</script>
+
+    
+
+    <h1 class="heading">RENTAX</h1>
+
+    <h2 style="text-align: center; margin-top: 10px;" >Fast & Easy Way To Rent A Car</h2>
+    <p style="text-shadow: #e0e0d9; font-size: 24px; text-align: center; margin-top: 20px; text-shadow: black; font-weight: bold;">A small
+      river named Duden flows by their place and supplies it with the necessary regelialia.<br>
+      It is a paradisematic country, in which roasted parts</p>
+    <h2 style="margin-left: 40px; padding-top: 10px; color: rgb(206, 184, 62); text-shadow: 2px 2px #000000;">Plan your
+      Trip Now</h2>
+    <h1 style="margin-left: 40px; text-shadow: 2px 2px #000000; color: #e0e0d9;">Saving <mark style=" background-color: rgb(0, 0, 0); color: aliceblue;text-shadow: 
+               2px 2px #ca7b7b;">BIG </mark>With Our <br> Car Rental</h1>
+  </div>
+
+  
+     
+  <div class="finance">
+    <h1 style="text-align: center; padding-top: 20px; font-size: 32px;">Vehicle Models</h1>
+    <h1 style="text-align: center;  font-size: 48px;">Our rental fleet</h1>
+    <h3 style="text-align: center;  font-size: 20px;"> To contribute to positive change and achieve our <br>sustainability goals with many extraordinary </h3>
+  
+    <div style="display: flex;">
+    <img src="iamges/finace broker.jpg" height="600px"; width="500px" style="margin-top: 100px; margin-left: 300px;">
+    <div style="margin-left: 30px;">
+    <h1 style="text-align: start; padding-top: 200px; font-size: 26px;">About Company</h1>
+    <h1 style="text-align: start;  font-size: 40px;">Our You start the engine <BR> and your adventure <br>begins</h1>
+    <h3 style="text-align: start;  font-size: 18px; "> Certain but she but shyness why cottage. Guy the put<br> instrument sir entreaties affronting.
+       Pretended <br>exquisite see cordially the you. <br>Weeks quiet do vexed or whose. Motionless if no to a
+      ffronting <br>imprudence no precaution. My indulged as disposal strongly attended.</h3>
+    </div>
+    </div>
+  
+   </div>
+  
+
+
+     
+      <div class="bodys2">
+
+        <header style=" background-image: linear-gradient(rgb(255, 255, 255),  rgb(105, 170, 207), rgb(255, 255, 255));">
+            <div class="box2">
+                <div class="cart-count"></div>
+                <icon-icon name="cart" id="cart-icon2"></icon-icon>
+            </div>
+    
+            
+    
+            <div class="mains2">
+                
+                
+                <div class="car-content2">
+    
+               
+    
+                <div class="Carbox2">
+                    <div class="pic">
+                        <img src="iamges/Maruti Suzuki s- PRESSO.jpg" class="car-image2">
+                    </div>
+    
+                    <h2 class="carname">  Maruti Suzuki s- PRESSO</h2>
+                    <span class="carprice">Rs.4000.00/hour</span><br>
+                   
+                    <icon-icon name="cart" class="add-cart"></icon-icon>
+                     
+                </div>
+    
+                <div class="Carbox2">
+                    <div class="pic">
+                        <img src="iamges/White BMW X1 SUV.jpg" class="car-image2">
+                    </div>
+    
+                    <h2 class="carname">BMW Auto Motive</h2>
+                    <span class="carprice">Rs.4000.00/hour</span><br>
+                   
+                    <icon-icon name="cart" class="add-cart"></icon-icon>
+                </div>
+    
+                <div class="Carbox2">
+                    <div class="pic">
+                        <img src="iamges/Honda Jass 1.2 i.jpg" class="car-image2">
+                    </div>
+    
+                    <h2 class="carname">Honda Jass 1.2 i</h2>
+                    <span class="carprice">Rs.4000.00/hour</span><br>
+                   
+                    <icon-icon name="cart" class="add-cart"></icon-icon>
+                </div>
+    
+                <div class="Carbox2">
+                    <div class="pic">
+                        <img src="iamges/Honda SUV.jpg" class="car-image2">
+                    </div>
+    
+                    <h2 class="carname">Honda SUV</h2>
+                  
+                    <span class="carprice">Rs.4000.00/hour</span><br>
+                   
+                    <icon-icon name="cart" class="add-cart"></icon-icon>
+                </div>
+    
+                <div class="Carbox2">
+                    <div class="pic">
+                        <img src="iamges/Honda-N-Box-Slash-side.jpg" class="car-image2">
+                    </div>
+    
+                    <h2 class="carname">Honda-N-Box-Slash</h2>
+                    <span class="carprice">Rs.4000.00/hour</span><br>
+                   
+                    <icon-icon name="cart" class="add-cart"></icon-icon>
+                </div>
+               </div>
+               
+               <div class="car-content3">
+                <div class="Carbox2">
+                    <div class="pic">
+                        <img src="iamges/toyota etios Xclusive edtion.jpg" class="car-image2">
+                    </div>
+    
+                    <h2 class="carname">Toyota etios Xclusive</h2>
+                    <span class="carprice">Rs.4000.00/hour</span><br>
+                   
+                    <icon-icon name="cart" class="add-cart"></icon-icon>
+                </div>
+    
+                <div class="Carbox2">
+                    <div class="pic">
+                        <img src="iamges/Toyoto Small SUV.jpg" class="car-image2">
+                    </div>
+    
+                    <h2 class="carname">Toyoto Small SUV</h2>
+                    <span class="carprice">Rs.4000.00/hour</span><br>
+                   
+                    <icon-icon name="cart" class="add-cart"></icon-icon>
+                </div>
+    
+                <div class="Carbox2">
+                    <div class="pic">
+                        <img src="iamges/Jaguar F-TYPE R-Dynamic.jpg" class="car-image2">
+                    </div>
+    
+                    <h2 class="carname">Jaguar F-TYPE R-Dynamic</h2>
+                    <span class="carprice">Rs.4000.00/hour</span><br>
+                  
+                    <icon-icon name="cart" class="add-cart"></icon-icon>
+                </div>
+    
+                <div class="Carbox2">
+                    <div class="pic">
+                        <img src="iamges/White BMW X1 SUV.jpg" class="car-image2">
+                    </div>
+    
+                    <h2 class="carname">White BMW X1 SUV</h2>
+                    <span class="carprice">Rs.4000.00/hour</span><br>
+                   
+                    <icon-icon name="cart" class="add-cart"></icon-icon>
+                </div>
+    
+                <div class="Carbox2">
+                    <div class="pic">
+                        <img src="iamges/volkswagen Ameo.png" class="car-image2">
+                    </div>
+    
+                  
+                    <h2 class="carname">Volkswagen Ameo</h2>
+                    <span class="carprice">Rs.4000.00/hour</span><br>
+                   
+                    <icon-icon name="cart" class="add-cart"></icon-icon>
+                </div>
+    
+            </div>
+    
+    
+    
+      </div>
+        </header >
+
+      <div      style="  background-image: linear-gradient(rgb(255, 255, 255), rgb(105, 170, 207), rgb(105, 170, 207));  ">
+        <div class="centerpage">
+          <h1 style="text-align: center; color: rgb(19, 20, 20); margin-top: 40px;">Why Use Caribonix’s
+            Car Rental Website Builder</h1> <BR>
+          <h2 style="text-align: center; color: #463c3c;">Our easy-to-use car rental website builder <br>
+            makes getting your site up and running simple.</h2>
+        </div>
+
+        <div>
+          <div class="icons">
+            <i class='bx bx-photo-album bx-lg'></i>
+            <i class='bx bx-mobile bx-lg' ></i>
+            <i class='bx bx-search-alt-2 bx-lg' ></i>
+           </div>
+        </div>
+          <div style="display: flex; justify-content: space-around; height: 400px;  ">
+        <h3 style="font-size: 16px;">No coding skills are <br>required. Choose a car rental <br>website template and customize<br>
+          it to suit your needs, <br>all designed to save you time.</h3>
+       
+          <h3 style="font-size: 16px;">All car rental websites are<br> fully responsive and created<br> to adjust
+          automatically to any device<br> screen size, whether mobile, <br>tablet or desktop</h3>
+          
+          <h3 style="font-size: 16px;">Get found in search<br> results by people looking to rent a <br>vehicle.
+          Your car rental website<br> is built to provide<br> maximum search engine visibility.</h3>
+          
+          </div>
+          </div>
+    
+     </div>  
+    
+   
+
+  <footer>
+
+    <img src="iamges/car in left site.jpg" width="200px" height="300px" >
+
+    <div>
+      <h1 class="navtext">
+        Solutions<br><br>
+        Itinerary Management<br>
+        Proposals + Quotes<br>
+        Simple CRM + Forms<br>
+        Website + Marketing<br>
+        Trip Plans Mobile App<br>
+        White Labels<br><br> <br>
+
+
+        Solutions For<br><br>
+        Travel Advisors<br>
+        DMCs and On-Sites<br>
+        Tour Operators<br>
+        DMOs and Tourism<br>
+        Host Agencies<br>
+        Suppliers<br>
+      </h1>
+    </div>
+
+    <div>
+      <h1 class="navtext">
+        Support<br><br>
+        Certification<br>
+        FAQs<br>
+        API Documentation<br>
+        Contact Us<br>
+        Forgot Password?<br>
+        Sign In<br><br><br><br>
+
+
+        Travefy Academy<br>
+        Travefy Academy<br>
+        Educational Webinars<br>
+        The Lounge Podcast<br>
+      </h1>
+    </div>
+
+    <div>
+      <h1 class="navtext">
+        Company<br><br>
+        About<br>
+        The Team<br>
+        Careers<br>
+        Agent Reviews<br>
+        Case Studies<br>
+        Press Information<br><br>
+
+
+        Discover<br>
+        Professional Travel Advisors
+        <h1>
+    </div>
+  </footer>
+
+
+
+
+</body>
+
+</html>

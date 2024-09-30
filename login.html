@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body style="background-image: url(iamges/car\ in\ left\ site.jpg);background-repeat: no-repeat;  background-size: cover;">
+
+    <form id="loginForm">
+    <div class="container">
+        <h1 style="font-family: Verdana, Geneva, Tahoma, sans-serif;font-size: 42px; color: azure; text-shadow: 4px 4px #c42205;">LOGIN</h1>
+    
+    <label for="user name" >ENTER EMAIL </label><br>
+    <input type="text" placeholder="Enter Email id" name="EMAIL"  id="Emailname" required>
+     <br><br>
+    <label for="user name">ENTER PASSWORD</label><br>
+    <input type="text" placeholder="Enter PASSWORD" name="PASSWORD"  id="passwordName" required >
+    <br>
+     <button type="submit"> SUBMIT</button>
+   
+     <button style="background-color: rgb(168, 236, 168);"><a href="welcome.html">BACK</a></button> <br>
+      
+     <div class="social">
+     <a href="https://accounts.google.com/o/oauth2/auth?response_type=code&amp;access_type=online&amp;client_id=145900477204-6dnutinjqu0vds73t4lvskrlc58ec08p.apps.googleusercontent.com&amp;redirect_uri=https%3A%2F%2Frentbike.lk%2Fthird-party-logins%2Fgoogle.php&amp;state&amp;scope=email%20profile&amp;approval_prompt=auto"
+      class="d-flex align-items-center justify-content-center form-group btn google-login w-100">
+        <span><img src="GOOGLE LOGO.png" class="img-fluid" alt="Google"></span>Log in with Google</a>
+        </div>
+        <a href="welcome.html"></a>
+        &nbsp; <a href="register.html">Go to Register</a>
+
+
+</div>
+</form>
+<script>
+document.getElementById("loginForm")
+    .addEventListener("submit", function (event) {
+    event.preventDefault();
+    var Emailname = document.getElementById("Emailname").value;
+    var passwordName = document.getElementById("passwordName").value;
+    
+    var user = localStorage.getItem(Emailname);
+    
+    if (user) {
+    var parsedUser = JSON.parse(user);
+    if (parsedUser.passwordName === passwordName) {
+    localStorage.setItem("user", JSON.stringify(parsedUser));
+    window. location.href = "carrent.html";
+    } else {
+    alert("Incorrect password");
+    }
+    
+    
+    } else {
+    alert("User not found");
+    }
+    });
+    </script>
+<script src="carrent.js"></script>
+
+</body>
+</html>

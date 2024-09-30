@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        #CarBooking{
+             font-family: Arial, sans-serif;
+             background-color: #f4f4f4;
+         }
+        
+         .container {
+             width: 80%;
+             margin: 20px auto;
+             padding: 20px;
+             background-color: #fff;
+             border-radius: 8px;
+             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+         }
+         h2 {
+             text-align: center;
+             margin-bottom: 20px;
+         }
+         .car-list {
+             display: flex;
+             flex-wrap: wrap;
+             gap: 20px;
+         }
+         .car-item {
+             background-color: #f9f9f9;
+             padding: 10px;
+             border-radius: 8px;
+             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+             width: calc(33.333% - 40px);
+             margin-bottom: 20px;
+             display: flex;
+             flex-direction: column;
+             align-items: center;
+         }
+         .car-item img {
+             max-width: 100%;
+             height: auto;
+             border-radius: 8px;
+         }
+         .car-item button {
+             margin-top: auto;
+             background-color: #007bff;
+             color: white;
+             border: none;
+             padding: 10px;
+             border-radius: 4px;
+             cursor: pointer;
+         }
+         .car-item button:hover {
+             background-color: #0056b3;
+         }
+     </style>
+
+</head>
+
+<body class="bodys">
+
+    <header>
+        <div class="box">
+            <div class="cart-count"></div>
+            <icon-icon name="cart" id="cart-icon"></icon-icon>
+        </div>
+
+        <h1 class="text1">FIND YOUR CAR</h1>
+        <button style="background-color: green; margin-left: 407px;"><a href="carrent.html">BACK</a></button>
+
+        <nav class="choosedate">
+            <div style="display: flex; justify-content:space-evenly ; padding-top: 20px;">
+             
+            <div>
+              <label for="choose the date" >Pickup Date</label>
+               
+              <input type="date" class="format" placeholder="Pick Up Date" name="pickupDate" id="pickupDate">
+              <span><i class="feather-calendar"></i></span>
+        
+              </div>
+              
+              <div>
+              <label for="choose the date">Return Date</label>
+        
+              <input type="date" class="format" placeholder="Return Date" name= "ReturnDate" id="ReturnDate">
+              <span><i class="feather-calendar"></i></span>
+              </div>
+        
+              </div>
+        
+        
+          </nav>
+
+
+
+          <!-- Available cars  -->
+    <section id="CarBooking">
+        <div class="container">
+            <h2>Available Cars</h2>
+            <div class="car-list" id="car-list">
+                <!-- Cars will be displayed here -->
+            </div>
+        </div>
+        </section>
+
+        
+        <div class="mains">
+            
+            
+            <div class="car-content">
+
+           
+
+            <div class="Carbox">
+                <div class="pic">
+                    <img src="iamges/Maruti Suzuki s- PRESSO.jpg" class="car-image">
+                </div>
+
+                <h2 class="carname">  Maruti Suzuki s- PRESSO</h2>
+                <span class="carprice">Rs.4000.00/hour</span>
+                <button class="press">Select</button>
+                <icon-icon name="cart" class="add-cart"></icon-icon>
+                 
+            </div>
+
+            <div class="Carbox">
+                <div class="pic">
+                    <img src="bmw auto motive.jpg" class="car-image">
+                </div>
+
+                <h2 class="carname">BMW Auto Motive</h2>
+                <span class="carprice">Rs.4000.00/hour</span>
+                <button class="press">Select</button>
+                <icon-icon name="cart" class="add-cart"></icon-icon>
+            </div>
+
+            <div class="Carbox">
+                <div class="pic">
+                    <img src="iamges/Honda Jass 1.2 i.jpg" class="car-image">
+                </div>
+
+                <h2 class="carname">Honda Jass 1.2 i</h2>
+                <span class="carprice">Rs.4000.00/hour</span>
+                <button class="press">Select</button>
+                <icon-icon name="cart" class="add-cart"></icon-icon>
+            </div>
+
+            <div class="Carbox">
+                <div class="pic">
+                    <img src="iamges/Honda SUV.jpg" class="car-image">
+                </div>
+
+                <h2 class="carname">Honda SUV</h2>
+                <span class="carprice">Rs.4000.00/hour</span>
+                <button class="press">Select</button>
+                <icon-icon name="cart" class="add-cart"></icon-icon>
+            </div>
+
+            <div class="Carbox">
+                <div class="pic">
+                    <img src="iamges/Honda-N-Box-Slash-side.jpg" class="car-image">
+                </div>
+
+                <h2 class="carname">Honda-N-Box-Slash</h2>
+                <span class="carprice">Rs.4000.00/hour</span>
+                <button class="press">Select</button>
+                <icon-icon name="cart" class="add-cart"></icon-icon>
+            </div>
+
+            <div class="Carbox">
+                <div class="pic">
+                    <img src="iamges/toyota etios Xclusive edtion.jpg" class="car-image">
+                </div>
+
+                <h2 class="carname">Toyota etios Xclusive</h2>
+                <span class="carprice">Rs.4000.00/hour</span>
+                <button class="press">Select</button>
+                <icon-icon name="cart" class="add-cart"></icon-icon>
+            </div>
+
+            <div class="Carbox">
+                <div class="pic">
+                    <img src="iamges/Toyoto Small SUV.jpg" class="car-image">
+                </div>
+
+                <h2 class="carname">Toyoto Small SUV</h2>
+                <span class="carprice">Rs.4000.00/hour</span>
+                <button class="press">Select</button>
+                <icon-icon name="cart" class="add-cart"></icon-icon>
+            </div>
+
+            <div class="Carbox">
+                <div class="pic">
+                    <img src="iamges/Jaguar F-TYPE R-Dynamic.jpg" class="car-image">
+                </div>
+
+                <h2 class="carname">Jaguar F-TYPE R-Dynamic</h2>
+                <span class="carprice">Rs.4000.00/hour</span>
+                <button class="press">Select</button>
+                <icon-icon name="cart" class="add-cart"></icon-icon>
+            </div>
+
+            <div class="Carbox">
+                <div class="pic">
+                    <img src="iamges/White BMW X1 SUV.jpg" class="car-image">
+                </div>
+
+                <h2 class="carname">White BMW X1 SUV</h2>
+                <span class="carprice">Rs.4000.00/hour</span>
+                <button class="press">Select</button>
+                <icon-icon name="cart" class="add-cart"></icon-icon>
+            </div>
+
+            <div class="Carbox">
+                <div class="pic">
+                    <img src="iamges/volkswagen Ameo.png" class="car-image">
+                </div>
+
+              
+                <h2 class="carname">Volkswagen Ameo</h2>
+                <span class="carprice">Rs.4000.00/hour</span>
+                <button class="press">Select</button>
+                <icon-icon name="cart" class="add-cart"></icon-icon>
+            </div>
+
+        </div>
+
+
+
+  </div>
+    </header>
+
+   
+
+</body>
+
+
+</html>
